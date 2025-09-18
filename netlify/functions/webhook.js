@@ -1,6 +1,21 @@
 const https = require('https');
 
 exports.handler = async (event, context) => {
+  console.log('Webhook function called:', event.httpMethod);
+  
+  // Gérer les requêtes OPTIONS (CORS)
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS'
+      },
+      body: ''
+    };
+  }
+  
   // Vérifier que c'est bien un webhook Figma
   if (event.httpMethod !== 'POST') {
     return {

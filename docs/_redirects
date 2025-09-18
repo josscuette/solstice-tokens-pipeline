@@ -1,0 +1,2 @@
+/webhook /.netlify/functions/webhook 200
+/webhook.html /.netlify/functions/webhook 200
