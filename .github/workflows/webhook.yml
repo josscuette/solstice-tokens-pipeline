@@ -3,6 +3,13 @@ name: Process Figma Webhook
 on:
   repository_dispatch:
     types: [figma-publish]
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: 'Test mode (skip Figma extraction)'
+        required: false
+        default: 'false'
+        type: boolean
 
 jobs:
   process-webhook:
