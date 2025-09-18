@@ -526,6 +526,7 @@
   --stroke-ai-subdued: #f820ff;
   --stroke-asSurface: #0d0f13;
   --stroke-danger: #e2718e;
+  --stroke-default: #4a556a;
   --stroke-defaultAccessible: #6f7e9a;
   --stroke-disabled: #ffffff0d;
   --stroke-interaction: #2fa0c7;
@@ -604,6 +605,7 @@
   --text-interaction-default: #2fa0c7;
   --text-interaction-reversed: #3eb0d7;
   --text-rag-danger: #e2718e;
+  --text-rag-dangerAccessible: #e2718e;
   --text-rag-success: #10da76;
   --text-rag-successAccessible: #10da76;
   --text-rag-warning: #fcac7e;
@@ -774,6 +776,7 @@
   --stroke-ai-subdued: #f820ff;
   --stroke-asSurface: #ffffff;
   --stroke-danger: #b0133a;
+  --stroke-default: #ced5d8;
   --stroke-defaultAccessible: #637177;
   --stroke-disabled: #ced5d880;
   --stroke-interaction: #09779e;
@@ -852,6 +855,7 @@
   --text-interaction-default: #09779e;
   --text-interaction-reversed: #3eb0d7;
   --text-rag-danger: #b0133a;
+  --text-rag-dangerAccessible: #8c0f2e;
   --text-rag-success: #077f4e;
   --text-rag-successAccessible: #046744;
   --text-rag-warning: #c14701;

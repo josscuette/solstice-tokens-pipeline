@@ -96,9 +96,7 @@
   --type-title3-size: var(--type-L-title3-size);
   --type-title3-typeface: var(--type-L-title3-typeface);
   --type-title3-weight: var(--type-L-title3-weight);
-  --layout-grid-columns: var(--layout-grid-L-columns);
   --layout-grid-columnsScroll: var(--layout-grid-L-columnsScroll);
-  --layout-grid-gutter: var(--layout-grid-L-gutter);
   --layout-grid-sidePadding: var(--layout-grid-L-sidePadding);
   --layout-stack-horizontal-gap-default: var(--spacing-micro-3);
   --comp-accordion-leftDropdown-gap: var(--spacing-micro-4);
@@ -521,9 +519,7 @@
   --type-title3-size: var(--type-M-title3-size);
   --type-title3-typeface: var(--type-M-title3-typeface);
   --type-title3-weight: var(--type-M-title3-weight);
-  --layout-grid-columns: var(--layout-grid-M-columns);
   --layout-grid-columnsScroll: var(--layout-grid-M-columnsScroll);
-  --layout-grid-gutter: var(--layout-grid-M-gutter);
   --layout-grid-sidePadding: var(--layout-grid-M-sidePadding);
   --layout-stack-horizontal-gap-default: var(--spacing-micro-2);
   --comp-accordion-leftDropdown-gap: var(--spacing-micro-3);
@@ -946,9 +942,7 @@
   --type-title3-size: var(--type-H-title3-size);
   --type-title3-typeface: var(--type-H-title3-typeface);
   --type-title3-weight: var(--type-H-title3-weight);
-  --layout-grid-columns: var(--layout-grid-H-columns);
   --layout-grid-columnsScroll: var(--layout-grid-H-columnsScroll);
-  --layout-grid-gutter: var(--layout-grid-H-gutter);
   --layout-grid-sidePadding: var(--layout-grid-H-sidePadding);
   --layout-stack-horizontal-gap-default: var(--spacing-micro-1);
   --comp-accordion-leftDropdown-gap: var(--spacing-micro-3);
