@@ -1,0 +1,7 @@
+{
+  "name": "netlify-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for webhook",
+  "main": "webhook.js",
+  "dependencies": {}
+}
