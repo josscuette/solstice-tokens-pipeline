@@ -149,7 +149,7 @@
     "values": {
       "3067:1": 0
     },
-    "hiddenFromPublishing": true,
+    "hiddenFromPublishing": false,
     "scopes": [
       "TEXT_CONTENT",
       "CORNER_RADIUS"
