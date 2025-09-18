@@ -3,7 +3,7 @@
   command = "echo 'No build needed'"
 
 [functions]
-  directory = "netlify/functions"
+  directory = "docs/netlify/functions"
 
 [[redirects]]
   from = "/webhook"
