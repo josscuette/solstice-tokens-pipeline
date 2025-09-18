@@ -1,0 +1,35 @@
+name: Cleanup and Setup Figma Webhooks
+
+on:
+  workflow_dispatch:
+    inputs:
+      webhook_url:
+        description: 'Webhook URL (default: Netlify)'
+        required: false
+        default: 'https://solsticetokenspipeline.netlify.app/webhook'
+        type: string
+
+jobs:
+  cleanup-webhooks:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Cleanup and Create Webhooks
+      run: |
+        node scripts/cleanup-and-create-webhooks.js
+      env:
+        FIGMA_PERSONAL_ACCESS_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+        WEBHOOK_URL: ${{ github.event.inputs.webhook_url }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
