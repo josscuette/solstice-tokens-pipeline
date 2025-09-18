@@ -17,7 +17,7 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-09-18T19:08:42.459Z",
+    "updatedAt": "2025-09-18T19:15:59.487Z",
     "subscribed_id": "VariableID:0fafa21b46a7acd594d91ff233f2e0d532702e9c/18794:205",
     "isPublished": true
   },
@@ -112,7 +112,7 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-09-18T19:08:42.469Z",
+    "updatedAt": "2025-09-18T19:15:59.552Z",
     "subscribed_id": "VariableID:70b16fd6cfaba092de852fba883ea9ca1f27582b/18794:203",
     "isPublished": true
   },
@@ -153,32 +153,6 @@
     "isPublished": true
   },
   {
-    "name": "TestWebhookCoreTokens",
-    "source": "core-primitives",
-    "id": "VariableID:25393:13711",
-    "key": "815b6791d8bd136d598779079a3b804f9671cda6",
-    "resolvedType": "COLOR",
-    "resolvedDataType": "COLOR",
-    "description": "",
-    "values": {
-      "3067:1": {
-        "r": 0.9582839012145996,
-        "g": 0.16567757725715637,
-        "b": 1,
-        "a": 1
-      }
-    },
-    "hiddenFromPublishing": false,
-    "scopes": [
-      "ALL_SCOPES"
-    ],
-    "codeSyntax": {},
-    "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-09-18T19:08:42.406Z",
-    "subscribed_id": "VariableID:815b6791d8bd136d598779079a3b804f9671cda6/25393:13",
-    "isPublished": true
-  },
-  {
     "name": "radius/strong",
     "source": "core-primitives",
     "id": "VariableID:5736:4639",
@@ -196,7 +170,7 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-09-18T19:08:42.477Z",
+    "updatedAt": "2025-09-18T19:15:59.615Z",
     "subscribed_id": "VariableID:73c25f16a48966d2309608d53fdd9589b6de1365/18794:202",
     "isPublished": true
   },
@@ -218,7 +192,7 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-09-18T19:08:42.486Z",
+    "updatedAt": "2025-09-18T19:15:59.621Z",
     "subscribed_id": "VariableID:9257e2d6ea20b9edf9bc83779a134e1208458ebb/18794:207",
     "isPublished": true
   },
@@ -240,7 +214,7 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-09-18T19:08:42.494Z",
+    "updatedAt": "2025-09-18T19:15:59.627Z",
     "subscribed_id": "VariableID:b138fd2dcca4f2861dcad12321752e5c014e89e2/18794:206",
     "isPublished": true
   },
@@ -262,7 +236,7 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-09-18T19:08:42.501Z",
+    "updatedAt": "2025-09-18T19:15:59.632Z",
     "subscribed_id": "VariableID:b7ccd99e6cb2d92632552d21e50dc37c28ad09b6/18794:201",
     "isPublished": true
   },
@@ -284,7 +258,7 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-09-18T19:08:42.507Z",
+    "updatedAt": "2025-09-18T19:15:59.637Z",
     "subscribed_id": "VariableID:c6fc725fdbcc0904e4fb8d1cbbf63ccd91bd5aec/18794:204",
     "isPublished": true
   },

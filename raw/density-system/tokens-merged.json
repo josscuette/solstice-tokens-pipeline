@@ -10773,22 +10773,59 @@
     "resolvedDataType": "FLOAT",
     "description": "",
     "values": {
-      "24109:0": {
+      "13263:0": {
         "type": "VARIABLE_ALIAS",
-        "id": "VariableID:26521:71612"
+        "id": "VariableID:576198b9428c85b5c5bad900baa390ec2307f189/5426:1698"
       },
-      "24109:3": {
+      "13263:1": {
         "type": "VARIABLE_ALIAS",
-        "id": "VariableID:26521:71608"
+        "id": "VariableID:1b1898761e005651bda7990409328a829a2b1bee/5426:1695"
       },
-      "24109:4": {
+      "13263:2": {
         "type": "VARIABLE_ALIAS",
-        "id": "VariableID:26521:71616"
+        "id": "VariableID:3ac94763da9fcaf956a995834e710b4f3345620d/5426:1699"
+      },
+      "13263:3": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:3ac94763da9fcaf956a995834e710b4f3345620d/5426:1699"
+      },
+      "13263:4": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:3ac94763da9fcaf956a995834e710b4f3345620d/5426:1699"
+      },
+      "13263:5": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:3ac94763da9fcaf956a995834e710b4f3345620d/5426:1699"
+      },
+      "13263:6": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:3ac94763da9fcaf956a995834e710b4f3345620d/5426:1699"
+      },
+      "13263:7": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:3ac94763da9fcaf956a995834e710b4f3345620d/5426:1699"
+      },
+      "13263:8": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:ffda2750d33c4e631ce1eb07f94352372d871d06/5426:1705"
+      },
+      "13263:9": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:d06fbfd929b644c388c230b10b85df8802e070b1/5426:1702"
+      },
+      "13263:10": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:1bf8d5ba7e28e824212785bad11c59455168ed53/5426:1693"
+      },
+      "13263:11": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:d06fbfd929b644c388c230b10b85df8802e070b1/5426:1702"
       }
     },
     "hiddenFromPublishing": false,
     "scopes": [
-      "ALL_SCOPES"
+      "WIDTH_HEIGHT",
+      "GAP"
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:24109:209749",
@@ -19226,22 +19263,23 @@
     "resolvedDataType": "FLOAT",
     "description": "",
     "values": {
-      "24109:0": {
-        "type": "VARIABLE_ALIAS",
-        "id": "VariableID:26521:71609"
-      },
-      "24109:3": {
-        "type": "VARIABLE_ALIAS",
-        "id": "VariableID:26521:71605"
-      },
-      "24109:4": {
-        "type": "VARIABLE_ALIAS",
-        "id": "VariableID:26521:71613"
-      }
+      "13263:0": 2,
+      "13263:1": 4,
+      "13263:2": 4,
+      "13263:3": 4,
+      "13263:4": 6,
+      "13263:5": 6,
+      "13263:6": 12,
+      "13263:7": 12,
+      "13263:8": 12,
+      "13263:9": 12,
+      "13263:10": 12,
+      "13263:11": 12
     },
     "hiddenFromPublishing": false,
     "scopes": [
-      "ALL_SCOPES"
+      "WIDTH_HEIGHT",
+      "GAP"
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:24109:209749",
