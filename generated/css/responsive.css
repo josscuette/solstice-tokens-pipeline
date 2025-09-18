@@ -178,8 +178,6 @@
     --layout-breakpoints-deviceType: Mobile;
     --layout-breakpoints-screenWidth: var(--breakpoint-mobile-Small);
     --layout-global-orientation: Vertical;
-    --layout-grid-columns: 2;
-    --layout-grid-gutter: var(--spacing-125);
     --layout-grid-H-columns: 2;
     --layout-grid-H-columnsScroll: 3;
     --layout-grid-H-gutter: var(--spacing-100);
@@ -375,8 +373,6 @@
     --layout-breakpoints-deviceType: Mobile;
     --layout-breakpoints-screenWidth: var(--breakpoint-mobile-Default);
     --layout-global-orientation: Vertical;
-    --layout-grid-columns: 4;
-    --layout-grid-gutter: var(--spacing-150);
     --layout-grid-H-columns: 4;
     --layout-grid-H-columnsScroll: 5;
     --layout-grid-H-gutter: var(--spacing-100);
@@ -572,8 +568,6 @@
     --layout-breakpoints-deviceType: Mobile;
     --layout-breakpoints-screenWidth: var(--breakpoint-mobile-Large);
     --layout-global-orientation: Vertical;
-    --layout-grid-columns: 4;
-    --layout-grid-gutter: var(--spacing-200);
     --layout-grid-H-columns: 4;
     --layout-grid-H-columnsScroll: 5;
     --layout-grid-H-gutter: var(--spacing-100);
@@ -769,8 +763,6 @@
     --layout-breakpoints-deviceType: Tablet;
     --layout-breakpoints-screenWidth: var(--breakpoint-tablet-Small);
     --layout-global-orientation: Vertical;
-    --layout-grid-columns: 4;
-    --layout-grid-gutter: var(--spacing-200);
     --layout-grid-H-columns: 4;
     --layout-grid-H-columnsScroll: 5;
     --layout-grid-H-gutter: var(--spacing-100);
@@ -966,8 +958,6 @@
     --layout-breakpoints-deviceType: Tablet;
     --layout-breakpoints-screenWidth: var(--breakpoint-tablet-Default);
     --layout-global-orientation: Vertical;
-    --layout-grid-columns: 6;
-    --layout-grid-gutter: var(--spacing-200);
     --layout-grid-H-columns: 6;
     --layout-grid-H-columnsScroll: 7;
     --layout-grid-H-gutter: var(--spacing-100);
@@ -1163,8 +1153,6 @@
     --layout-breakpoints-deviceType: Tablet;
     --layout-breakpoints-screenWidth: var(--breakpoint-tablet-Large);
     --layout-global-orientation: Vertical;
-    --layout-grid-columns: 6;
-    --layout-grid-gutter: var(--spacing-200);
     --layout-grid-H-columns: 6;
     --layout-grid-H-columnsScroll: 7;
     --layout-grid-H-gutter: var(--spacing-100);
@@ -1360,8 +1348,6 @@
     --layout-breakpoints-deviceType: Laptop;
     --layout-breakpoints-screenWidth: var(--breakpoint-laptop-Small);
     --layout-global-orientation: Horizontal;
-    --layout-grid-columns: 12;
-    --layout-grid-gutter: var(--spacing-200);
     --layout-grid-H-columns: 12;
     --layout-grid-H-columnsScroll: 11;
     --layout-grid-H-gutter: var(--spacing-125);
@@ -1557,8 +1543,6 @@
     --layout-breakpoints-deviceType: Laptop;
     --layout-breakpoints-screenWidth: var(--breakpoint-laptop-Default);
     --layout-global-orientation: Horizontal;
-    --layout-grid-columns: 12;
-    --layout-grid-gutter: var(--spacing-200);
     --layout-grid-H-columns: 12;
     --layout-grid-H-columnsScroll: 13;
     --layout-grid-H-gutter: var(--spacing-125);
@@ -1754,8 +1738,6 @@
     --layout-breakpoints-deviceType: Laptop;
     --layout-breakpoints-screenWidth: var(--breakpoint-laptop-Large);
     --layout-global-orientation: Horizontal;
-    --layout-grid-columns: 12;
-    --layout-grid-gutter: var(--spacing-250);
     --layout-grid-H-columns: 12;
     --layout-grid-H-columnsScroll: 13;
     --layout-grid-H-gutter: var(--spacing-125);
@@ -1951,8 +1933,6 @@
     --layout-breakpoints-deviceType: Desktop;
     --layout-breakpoints-screenWidth: var(--breakpoint-desktop-default);
     --layout-global-orientation: Horizontal;
-    --layout-grid-columns: 12;
-    --layout-grid-gutter: var(--spacing-350);
     --layout-grid-H-columns: 12;
     --layout-grid-H-columnsScroll: 13;
     --layout-grid-H-gutter: var(--spacing-125);
@@ -2148,8 +2128,6 @@
     --layout-breakpoints-deviceType: Desktop;
     --layout-breakpoints-screenWidth: var(--breakpoint-desktop-large);
     --layout-global-orientation: Horizontal;
-    --layout-grid-columns: 12;
-    --layout-grid-gutter: var(--spacing-300);
     --layout-grid-H-columns: 12;
     --layout-grid-H-columnsScroll: 13;
     --layout-grid-H-gutter: var(--spacing-125);
@@ -2345,8 +2323,6 @@
     --layout-breakpoints-deviceType: Desktop;
     --layout-breakpoints-screenWidth: var(--breakpoint-desktop-extraLarge);
     --layout-global-orientation: Horizontal;
-    --layout-grid-columns: 12;
-    --layout-grid-gutter: var(--spacing-350);
     --layout-grid-H-columns: 12;
     --layout-grid-H-columnsScroll: 13;
     --layout-grid-H-gutter: var(--spacing-125);
