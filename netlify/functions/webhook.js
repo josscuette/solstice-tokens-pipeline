@@ -43,8 +43,12 @@ exports.handler = async (event, context) => {
       'wLvDaVOlQQcc1WacqT7BtB'  // Color Themes
     ];
     
-    // Vérifier que l'événement est LIBRARY_PUBLISH
-    if (body.event_type !== 'LIBRARY_PUBLISH') {
+    // TEMPORAIRE: Accepter tous les événements pour debug
+    console.log(`Event type received: ${body.event_type}`);
+    console.log(`File key: ${body.file_key}`);
+    
+    // Vérifier que l'événement est LIBRARY_PUBLISH ou FILE_UPDATE (pour debug)
+    if (body.event_type !== 'LIBRARY_PUBLISH' && body.event_type !== 'FILE_UPDATE') {
       console.log(`Ignoring event type: ${body.event_type}`);
       return {
         statusCode: 200,
