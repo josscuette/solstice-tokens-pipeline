@@ -1,0 +1,41 @@
+name: Process Figma Webhook
+
+on:
+  repository_dispatch:
+    types: [figma-publish]
+
+jobs:
+  process-webhook:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Extract tokens from Figma
+      run: |
+        node src/extract/figmaExtractor.js
+      env:
+        FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+        FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
+        
+    - name: Generate CSS
+      run: |
+        node src/generate/cssGenerator.js
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git diff --staged --quiet || git commit -m "Auto-update tokens from Figma webhook"
+        git push

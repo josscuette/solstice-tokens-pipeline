@@ -19,7 +19,7 @@ Figma Publish → Webhook → GitHub Pages → GitHub Actions → Pipeline Token
 4. Choisis **main** branch et **/docs** folder
 5. Clique **Save**
 
-Ton endpoint sera disponible à : `https://josselin-cuette_jllt.github.io/solstice-tokens/webhook.html`
+Ton endpoint sera disponible à : `https://josscuette.github.io/TokensPipeline/webhook.html`
 
 ### 2. Configurer les secrets GitHub
 
@@ -57,13 +57,13 @@ const GITHUB_TOKEN = 'ghp_ton_vrai_token_ici';
 2. Clique **Create webhook**
 3. Configure :
    - **Name** : `Solstice Tokens Pipeline`
-   - **URL** : `https://josselin-cuette_jllt.github.io/solstice-tokens/webhook.html`
+   - **URL** : `https://josscuette.github.io/TokensPipeline/webhook.html`
    - **Events** : Sélectionne `FILE_PUBLISHED` et `VARIABLE_PUBLISHED`
 4. Clique **Create webhook**
 
 ### 6. Tester le système
 
-1. **Test manuel** : Va sur `https://josselin-cuette_jllt.github.io/solstice-tokens/webhook.html` et clique "Test Webhook"
+1. **Test manuel** : Va sur `https://josscuette.github.io/TokensPipeline/webhook.html` et clique "Test Webhook"
 2. **Test réel** : Publie une variable dans Figma et vérifie que GitHub Actions se déclenche
 
 ## 🔧 Dépannage
@@ -97,5 +97,6 @@ const GITHUB_TOKEN = 'ghp_ton_vrai_token_ici';
 4. Les changements sont automatiquement commités
 
 **C'est tout ! Ton pipeline est maintenant 100% automatisé !** 🎉
+
 
 
