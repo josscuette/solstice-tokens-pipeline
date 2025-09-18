@@ -9621,22 +9621,14 @@
     "values": {
       "2403:0": {
         "type": "VARIABLE_ALIAS",
-        "id": "VariableID:5ecf7b0ba077cc9b5a18752edb07d34474fa49b8/5427:2003"
+        "id": "VariableID:5ecf7b0ba077cc9b5a18752edb07d34474fa49b8/4708:330"
       },
       "2403:1": {
         "type": "VARIABLE_ALIAS",
-        "id": "VariableID:6d975b8e975d0feaba543043d6640a8a1d84d64e/5427:2013"
-      },
-      "23394:0": {
-        "type": "VARIABLE_ALIAS",
-        "id": "VariableID:4b6ed54db4dbf83e8efda85fd81a86dd4fa08619/6117:39"
-      },
-      "23394:1": {
-        "type": "VARIABLE_ALIAS",
-        "id": "VariableID:5ecf7b0ba077cc9b5a18752edb07d34474fa49b8/5427:2003"
+        "id": "VariableID:6d975b8e975d0feaba543043d6640a8a1d84d64e/4708:641"
       }
     },
-    "hiddenFromPublishing": false,
+    "hiddenFromPublishing": true,
     "scopes": [
       "FRAME_FILL",
       "SHAPE_FILL",
