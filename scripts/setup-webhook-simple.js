@@ -40,22 +40,28 @@ function makeRequest(url, options, data) {
     });
 }
 
-// Fonction pour extraire le fileId depuis les tokens
-function extractFileId() {
+// Fonction pour extraire tous les fileIds depuis les tokens
+function extractAllFileIds() {
+    const fileIds = [];
     try {
         const keyMapping = JSON.parse(fs.readFileSync('raw/key-mapping.json', 'utf8'));
-        const firstEntry = Object.values(keyMapping)[0];
         
-        if (firstEntry && firstEntry.id) {
-            const match = firstEntry.id.match(/VariableID:[^/]*\/([0-9]+):/);
-            if (match) {
-                return match[1];
+        // Extraire tous les fileIds uniques
+        const uniqueFileIds = new Set();
+        Object.values(keyMapping).forEach(entry => {
+            if (entry.id) {
+                const match = entry.id.match(/VariableID:[^/]*\/([0-9]+):/);
+                if (match) {
+                    uniqueFileIds.add(match[1]);
+                }
             }
-        }
+        });
+        
+        return Array.from(uniqueFileIds);
     } catch (error) {
-        console.error('Erreur lors de l\'extraction du fileId:', error.message);
+        console.error('Erreur lors de l\'extraction des fileIds:', error.message);
     }
-    return null;
+    return [];
 }
 
 // Fonction pour créer le webhook
@@ -97,29 +103,39 @@ async function createWebhook(fileId) {
 
 // Fonction principale
 async function main() {
-    console.log('🎨 Configuration automatique du webhook Figma');
-    console.log('==========================================');
+    console.log('🎨 Configuration automatique des webhooks Figma');
+    console.log('==============================================');
     
-    // Extraire le fileId depuis les tokens
-    const fileId = extractFileId();
+    // Extraire tous les fileIds depuis les tokens
+    const fileIds = extractAllFileIds();
     
-    if (!fileId) {
-        console.error('❌ Impossible d\'extraire le fileId depuis les tokens');
+    if (fileIds.length === 0) {
+        console.error('❌ Impossible d\'extraire les fileIds depuis les tokens');
         process.exit(1);
     }
     
-    console.log(`📁 File ID trouvé: ${fileId}`);
+    console.log(`📁 File IDs trouvés: ${fileIds.join(', ')}`);
     
-    // Créer le webhook
-    const webhook = await createWebhook(fileId);
+    // Créer un webhook pour chaque fichier
+    let successCount = 0;
+    for (const fileId of fileIds) {
+        const webhook = await createWebhook(fileId);
+        if (webhook) {
+            successCount++;
+            console.log(`✅ Webhook créé pour le fichier ${fileId}`);
+        } else {
+            console.log(`❌ Échec pour le fichier ${fileId}`);
+        }
+    }
     
-    if (webhook) {
-        console.log('\n🎉 Webhook configuré avec succès !');
+    if (successCount > 0) {
+        console.log('\n🎉 Webhooks configurés avec succès !');
         console.log(`🔗 URL: ${WEBHOOK_URL}`);
-        console.log(`📁 File ID: ${fileId}`);
-        console.log('\n💡 Vous pouvez maintenant publier votre fichier Figma pour tester !');
+        console.log(`📁 File IDs: ${fileIds.join(', ')}`);
+        console.log(`✅ ${successCount}/${fileIds.length} webhooks créés`);
+        console.log('\n💡 Vous pouvez maintenant publier vos fichiers Figma pour tester !');
     } else {
-        console.log('\n❌ Échec de la configuration du webhook');
+        console.log('\n❌ Échec de la configuration des webhooks');
     }
 }
 
