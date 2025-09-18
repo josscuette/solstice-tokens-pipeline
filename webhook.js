@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
     // Déclencher l'action GitHub
     const githubToken = process.env.GITHUB_TOKEN;
     const repoOwner = 'josscuette';
-    const repoName = 'TokensPipeline';
+    const repoName = 'solstice-tokens-pipeline';
     
     const payload = {
       event_type: 'figma-publish',
