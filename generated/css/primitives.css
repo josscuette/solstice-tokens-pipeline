@@ -660,12 +660,6 @@
   --spacing-1050: 168px;
   --spacing-1250: 200px;
   --spacing-1450: 232px;
-  --spacing-micro-1: var(--spacing-025);
-  --spacing-micro-2: var(--spacing-050);
-  --spacing-micro-3: var(--spacing-075);
-  --spacing-micro-4: var(--spacing-100);
-  --spacing-micro-5: var(--spacing-125);
-  --spacing-micro-6: var(--spacing-150);
   --radius-default: 6px;
   --radius-defaultWrap: 10px;
   --radius-full: 100px;
@@ -743,6 +737,7 @@
   --core-typeWeight-regular: 400;
   --core-typeWeight-strong: 600;
   --core-typeWeight-stronger: 700;
+  --TestWebhookCoreTokens: #f42aff;
   --grayscale-100: #f7f7f7;
   --grayscale-200: #efefef;
   --grayscale-300: #e3e3e3;

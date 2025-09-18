@@ -17,7 +17,7 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-02-26T18:03:32.950Z",
+    "updatedAt": "2025-09-18T19:08:42.459Z",
     "subscribed_id": "VariableID:0fafa21b46a7acd594d91ff233f2e0d532702e9c/18794:205",
     "isPublished": true
   },
@@ -112,118 +112,8 @@
     ],
     "codeSyntax": {},
     "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-02-26T18:03:32.958Z",
+    "updatedAt": "2025-09-18T19:08:42.469Z",
     "subscribed_id": "VariableID:70b16fd6cfaba092de852fba883ea9ca1f27582b/18794:203",
-    "isPublished": true
-  },
-  {
-    "name": "radius/strong",
-    "source": "core-primitives",
-    "id": "VariableID:5736:4639",
-    "key": "73c25f16a48966d2309608d53fdd9589b6de1365",
-    "resolvedType": "FLOAT",
-    "resolvedDataType": "FLOAT",
-    "description": "",
-    "values": {
-      "3067:1": 8
-    },
-    "hiddenFromPublishing": false,
-    "scopes": [
-      "TEXT_CONTENT",
-      "CORNER_RADIUS"
-    ],
-    "codeSyntax": {},
-    "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-02-26T18:03:32.966Z",
-    "subscribed_id": "VariableID:73c25f16a48966d2309608d53fdd9589b6de1365/18794:202",
-    "isPublished": true
-  },
-  {
-    "name": "radius/none",
-    "source": "core-primitives",
-    "id": "VariableID:3067:48588",
-    "key": "9257e2d6ea20b9edf9bc83779a134e1208458ebb",
-    "resolvedType": "FLOAT",
-    "resolvedDataType": "FLOAT",
-    "description": "",
-    "values": {
-      "3067:1": 0
-    },
-    "hiddenFromPublishing": true,
-    "scopes": [
-      "TEXT_CONTENT",
-      "CORNER_RADIUS"
-    ],
-    "codeSyntax": {},
-    "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-02-26T18:03:32.976Z",
-    "subscribed_id": "VariableID:9257e2d6ea20b9edf9bc83779a134e1208458ebb/18794:207",
-    "isPublished": true
-  },
-  {
-    "name": "radius/defaultWrap",
-    "source": "core-primitives",
-    "id": "VariableID:10457:79",
-    "key": "b138fd2dcca4f2861dcad12321752e5c014e89e2",
-    "resolvedType": "FLOAT",
-    "resolvedDataType": "FLOAT",
-    "description": "",
-    "values": {
-      "3067:1": 10
-    },
-    "hiddenFromPublishing": false,
-    "scopes": [
-      "TEXT_CONTENT",
-      "CORNER_RADIUS"
-    ],
-    "codeSyntax": {},
-    "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-02-26T18:03:32.982Z",
-    "subscribed_id": "VariableID:b138fd2dcca4f2861dcad12321752e5c014e89e2/18794:206",
-    "isPublished": true
-  },
-  {
-    "name": "radius/weak",
-    "source": "core-primitives",
-    "id": "VariableID:10457:78",
-    "key": "b7ccd99e6cb2d92632552d21e50dc37c28ad09b6",
-    "resolvedType": "FLOAT",
-    "resolvedDataType": "FLOAT",
-    "description": "",
-    "values": {
-      "3067:1": 3
-    },
-    "hiddenFromPublishing": true,
-    "scopes": [
-      "TEXT_CONTENT",
-      "CORNER_RADIUS"
-    ],
-    "codeSyntax": {},
-    "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-02-26T18:03:32.986Z",
-    "subscribed_id": "VariableID:b7ccd99e6cb2d92632552d21e50dc37c28ad09b6/18794:201",
-    "isPublished": true
-  },
-  {
-    "name": "radius/stronger",
-    "source": "core-primitives",
-    "id": "VariableID:10457:80",
-    "key": "c6fc725fdbcc0904e4fb8d1cbbf63ccd91bd5aec",
-    "resolvedType": "FLOAT",
-    "resolvedDataType": "FLOAT",
-    "description": "",
-    "values": {
-      "3067:1": 12
-    },
-    "hiddenFromPublishing": false,
-    "scopes": [
-      "TEXT_CONTENT",
-      "CORNER_RADIUS"
-    ],
-    "codeSyntax": {},
-    "variableCollectionId": "VariableCollectionId:3067:48587",
-    "updatedAt": "2025-02-26T18:03:32.989Z",
-    "subscribed_id": "VariableID:c6fc725fdbcc0904e4fb8d1cbbf63ccd91bd5aec/18794:204",
     "isPublished": true
   },
   {
@@ -260,6 +150,142 @@
     "variableCollectionId": "VariableCollectionId:2403:11472",
     "updatedAt": "2025-09-15T14:58:51.412Z",
     "subscribed_id": "VariableID:f9b293c5bde4557caf251d83cd5a744f514c1a7e/25321:374",
+    "isPublished": true
+  },
+  {
+    "name": "TestWebhookCoreTokens",
+    "source": "core-primitives",
+    "id": "VariableID:25393:13711",
+    "key": "815b6791d8bd136d598779079a3b804f9671cda6",
+    "resolvedType": "COLOR",
+    "resolvedDataType": "COLOR",
+    "description": "",
+    "values": {
+      "3067:1": {
+        "r": 0.9582839012145996,
+        "g": 0.16567757725715637,
+        "b": 1,
+        "a": 1
+      }
+    },
+    "hiddenFromPublishing": false,
+    "scopes": [
+      "ALL_SCOPES"
+    ],
+    "codeSyntax": {},
+    "variableCollectionId": "VariableCollectionId:3067:48587",
+    "updatedAt": "2025-09-18T19:08:42.406Z",
+    "subscribed_id": "VariableID:815b6791d8bd136d598779079a3b804f9671cda6/25393:13",
+    "isPublished": true
+  },
+  {
+    "name": "radius/strong",
+    "source": "core-primitives",
+    "id": "VariableID:5736:4639",
+    "key": "73c25f16a48966d2309608d53fdd9589b6de1365",
+    "resolvedType": "FLOAT",
+    "resolvedDataType": "FLOAT",
+    "description": "",
+    "values": {
+      "3067:1": 8
+    },
+    "hiddenFromPublishing": false,
+    "scopes": [
+      "TEXT_CONTENT",
+      "CORNER_RADIUS"
+    ],
+    "codeSyntax": {},
+    "variableCollectionId": "VariableCollectionId:3067:48587",
+    "updatedAt": "2025-09-18T19:08:42.477Z",
+    "subscribed_id": "VariableID:73c25f16a48966d2309608d53fdd9589b6de1365/18794:202",
+    "isPublished": true
+  },
+  {
+    "name": "radius/none",
+    "source": "core-primitives",
+    "id": "VariableID:3067:48588",
+    "key": "9257e2d6ea20b9edf9bc83779a134e1208458ebb",
+    "resolvedType": "FLOAT",
+    "resolvedDataType": "FLOAT",
+    "description": "",
+    "values": {
+      "3067:1": 0
+    },
+    "hiddenFromPublishing": true,
+    "scopes": [
+      "TEXT_CONTENT",
+      "CORNER_RADIUS"
+    ],
+    "codeSyntax": {},
+    "variableCollectionId": "VariableCollectionId:3067:48587",
+    "updatedAt": "2025-09-18T19:08:42.486Z",
+    "subscribed_id": "VariableID:9257e2d6ea20b9edf9bc83779a134e1208458ebb/18794:207",
+    "isPublished": true
+  },
+  {
+    "name": "radius/defaultWrap",
+    "source": "core-primitives",
+    "id": "VariableID:10457:79",
+    "key": "b138fd2dcca4f2861dcad12321752e5c014e89e2",
+    "resolvedType": "FLOAT",
+    "resolvedDataType": "FLOAT",
+    "description": "",
+    "values": {
+      "3067:1": 10
+    },
+    "hiddenFromPublishing": false,
+    "scopes": [
+      "TEXT_CONTENT",
+      "CORNER_RADIUS"
+    ],
+    "codeSyntax": {},
+    "variableCollectionId": "VariableCollectionId:3067:48587",
+    "updatedAt": "2025-09-18T19:08:42.494Z",
+    "subscribed_id": "VariableID:b138fd2dcca4f2861dcad12321752e5c014e89e2/18794:206",
+    "isPublished": true
+  },
+  {
+    "name": "radius/weak",
+    "source": "core-primitives",
+    "id": "VariableID:10457:78",
+    "key": "b7ccd99e6cb2d92632552d21e50dc37c28ad09b6",
+    "resolvedType": "FLOAT",
+    "resolvedDataType": "FLOAT",
+    "description": "",
+    "values": {
+      "3067:1": 3
+    },
+    "hiddenFromPublishing": true,
+    "scopes": [
+      "TEXT_CONTENT",
+      "CORNER_RADIUS"
+    ],
+    "codeSyntax": {},
+    "variableCollectionId": "VariableCollectionId:3067:48587",
+    "updatedAt": "2025-09-18T19:08:42.501Z",
+    "subscribed_id": "VariableID:b7ccd99e6cb2d92632552d21e50dc37c28ad09b6/18794:201",
+    "isPublished": true
+  },
+  {
+    "name": "radius/stronger",
+    "source": "core-primitives",
+    "id": "VariableID:10457:80",
+    "key": "c6fc725fdbcc0904e4fb8d1cbbf63ccd91bd5aec",
+    "resolvedType": "FLOAT",
+    "resolvedDataType": "FLOAT",
+    "description": "",
+    "values": {
+      "3067:1": 12
+    },
+    "hiddenFromPublishing": false,
+    "scopes": [
+      "TEXT_CONTENT",
+      "CORNER_RADIUS"
+    ],
+    "codeSyntax": {},
+    "variableCollectionId": "VariableCollectionId:3067:48587",
+    "updatedAt": "2025-09-18T19:08:42.507Z",
+    "subscribed_id": "VariableID:c6fc725fdbcc0904e4fb8d1cbbf63ccd91bd5aec/18794:204",
     "isPublished": true
   },
   {
