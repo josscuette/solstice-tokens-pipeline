@@ -48,8 +48,8 @@ exports.handler = async (event, context) => {
     console.log(`DEBUG - file_key: "${body.file_key}"`);
     console.log(`DEBUG - allowedFileIds:`, allowedFileIds);
     
-    // Vérifier que l'événement est LIBRARY_PUBLISH
-    if (body.event_type !== 'LIBRARY_PUBLISH') {
+    // Vérifier que l'événement est LIBRARY_PUBLISH ou figma-publish
+    if (body.event_type !== 'LIBRARY_PUBLISH' && body.event_type !== 'figma-publish') {
       console.log(`Ignoring event type: ${body.event_type}`);
       return {
         statusCode: 200,
@@ -63,7 +63,14 @@ exports.handler = async (event, context) => {
     }
     
     // Vérifier que le fichier concerné est dans notre liste autorisée
-    const fileId = body.file_key;
+    // Gérer les deux structures : directe (Figma) et nested (manuel)
+    let fileId;
+    if (body.event_type === 'figma-publish' && body.client_payload) {
+      fileId = body.client_payload.file_key;
+    } else {
+      fileId = body.file_key;
+    }
+    
     if (!fileId || !allowedFileIds.includes(fileId)) {
       console.log(`Ignoring file: ${fileId} (not in allowed list)`);
       return {
