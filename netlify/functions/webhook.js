@@ -43,6 +43,11 @@ exports.handler = async (event, context) => {
       'wLvDaVOlQQcc1WacqT7BtB'  // Color Themes
     ];
     
+    // DEBUG: Log des valeurs pour diagnostic
+    console.log(`DEBUG - event_type: "${body.event_type}"`);
+    console.log(`DEBUG - file_key: "${body.file_key}"`);
+    console.log(`DEBUG - allowedFileIds:`, allowedFileIds);
+    
     // Vérifier que l'événement est LIBRARY_PUBLISH
     if (body.event_type !== 'LIBRARY_PUBLISH') {
       console.log(`Ignoring event type: ${body.event_type}`);
