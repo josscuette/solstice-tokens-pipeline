@@ -65,13 +65,15 @@ async function createWebhook(fileId) {
     const webhookData = {
         event_type: 'FILE_UPDATE',
         file_id: fileId,
-        endpoint: WEBHOOK_URL
+        endpoint: WEBHOOK_URL,
+        team_id: '1203433736795501655',
+        passcode: 'solstice-webhook-2024' // Passcode pour sécuriser le webhook
     };
 
     const options = {
         method: 'POST',
         headers: {
-            'Authorization': `Bearer ${FIGMA_TOKEN}`,
+            'X-FIGMA-TOKEN': FIGMA_TOKEN,
             'Content-Type': 'application/json'
         }
     };
