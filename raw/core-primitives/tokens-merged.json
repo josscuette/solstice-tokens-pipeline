@@ -10,7 +10,7 @@
     "values": {
       "3067:1": 6
     },
-    "hiddenFromPublishing": false,
+    "hiddenFromPublishing": true,
     "scopes": [
       "TEXT_CONTENT",
       "CORNER_RADIUS"
@@ -149,7 +149,7 @@
     "values": {
       "3067:1": 0
     },
-    "hiddenFromPublishing": false,
+    "hiddenFromPublishing": true,
     "scopes": [
       "TEXT_CONTENT",
       "CORNER_RADIUS"
@@ -193,7 +193,7 @@
     "values": {
       "3067:1": 3
     },
-    "hiddenFromPublishing": false,
+    "hiddenFromPublishing": true,
     "scopes": [
       "TEXT_CONTENT",
       "CORNER_RADIUS"
