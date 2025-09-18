@@ -1,0 +1,96 @@
+name: Solstice Tokens Pipeline
+
+on:
+  # Déclenchement par webhook Figma via GitHub Pages
+  repository_dispatch:
+    types: [figma-publish]
+  
+  # Déclenchement manuel
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Forcer l\'exécution même si pas de changements'
+        required: false
+        default: false
+        type: boolean
+  
+  # Déclenchement sur push (pour tests)
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - '.github/workflows/**'
+
+jobs:
+  check-and-update-tokens:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Extract tokens from Figma
+      env:
+        FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+      run: |
+        echo "🔍 Extraction des tokens depuis Figma..."
+        npm run extract-only
+    
+    - name: Generate CSS tokens
+      run: |
+        echo "🚀 Génération des tokens CSS..."
+        npm run generate
+    
+    - name: Commit and push changes
+      run: |
+        echo "📝 Commit des changements..."
+        
+        # Configurer git
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Ajouter les fichiers modifiés
+        git add raw/ generated/
+        
+        # Vérifier s'il y a des changements à commiter
+        if git diff --staged --quiet; then
+          echo "Aucun changement à commiter"
+        else
+          # Créer le commit
+          git commit -m "🤖 Auto-update: tokens from Figma webhook [skip ci]"
+          
+          # Push vers le repository
+          git push origin main
+          
+          echo "✅ Tokens mis à jour avec succès!"
+        fi
+    
+    - name: Create summary
+      if: always()
+      run: |
+        echo "## 📊 Résumé du pipeline" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "- **Déclenchement**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Branche**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ github.event_name }}" == "repository_dispatch" ]; then
+          echo "✅ **Déclenché par webhook Figma**" >> $GITHUB_STEP_SUMMARY
+          echo "- **Source**: ${{ github.event.client_payload.source }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Timestamp**: ${{ github.event.client_payload.timestamp }}" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "ℹ️ **Déclenché manuellement**" >> $GITHUB_STEP_SUMMARY
+        fi

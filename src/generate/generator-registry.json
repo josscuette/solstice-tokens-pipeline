@@ -1,0 +1,86 @@
+{
+  "generators": [
+    {
+      "id": "primitives",
+      "name": "Primitives",
+      "targetFile": "generated/css/primitives.css",
+      "patterns": [
+        "radius/*",
+        "scale/*",
+        "spacing/*",
+        "Spacing/*",
+        "basics/*",
+        "core/*",
+        "elevationLevels/*",
+        "lasalle/*",
+        "royal/*",
+        "glacier/*",
+        "orange/*",
+        "sand/*",
+        "SpacingColorCode/*",
+        "ocean/*",
+        "breakpoint/*",
+        "Grid/*",
+        "Categorical/*"
+      ],
+      "emissionStrategy": "staticOnce",
+      "sourceFilter": "core-primitives"
+    },
+    {
+      "id": "responsive",
+      "name": "Responsive",
+      "targetFile": "generated/css/responsive.css",
+      "patterns": [
+        "spacing/responsive/*",
+        "layout/grid/*",
+        "grid/*",
+        "type/L/*",
+        "type/M/*",
+        "type/H/*"
+      ],
+      "emissionStrategy": "backingsPlusMappingWithMQ",
+      "sourceFilter": "density-system"
+    },
+    {
+      "id": "density",
+      "name": "Density",
+      "targetFile": "generated/css/density.css",
+      "patterns": [
+        "type/*",
+        "comp/*",
+        "layout/grid/columns",
+        "layout/grid/gutter",
+        "layout/grid/margin",
+        "layout/grid/padding"
+      ],
+      "emissionStrategy": "semanticTypography",
+      "sourceFilter": "density-system"
+    },
+    {
+      "id": "themes",
+      "name": "Themes",
+      "targetFile": "generated/css/themes.css",
+      "patterns": [
+        "amber/*",
+        "atoll/*",
+        "crimson/*",
+        "forest/*",
+        "glacier/*",
+        "jllRed/*",
+        "lasalle/*",
+        "lilac/*",
+        "lima/*",
+        "elevationLevels/*",
+        "surface/*",
+        "text/*",
+        "icon/*",
+        "stroke/*",
+        "brand/*",
+        "tonal/*",
+        "elevation/*"
+      ],
+      "emissionStrategy": "themeOnly",
+      "sourceFilter": "color-themes"
+    }
+  ]
+}

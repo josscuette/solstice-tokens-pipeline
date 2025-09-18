@@ -1,0 +1,32 @@
+{
+  "name": "solstice-tokens",
+  "version": "1.0.0",
+  "description": "Pipeline for CSS & Native Solstice tokens",
+  "type": "module",
+  "main": "src/generate/cssGenerator.js",
+  "scripts": {
+    "extract": "node src/extract/figmaExtractor.js && node src/generate/cssGenerator.js",
+    "extract-only": "node src/extract/figmaExtractor.js",
+    "generate": "node src/generate/cssGenerator.js",
+    "trace": "node scripts/trace-alias.js",
+    "snapshot": "node scripts/createSnapshot.js",
+    "serve": "python3 -m http.server 8082",
+    "dev": "python3 -m http.server 8082"
+  },
+  "keywords": [
+    "design-tokens",
+    "css",
+    "figma",
+    "solstice",
+    "jll"
+  ],
+  "author": "Josselin Cuette <josselin.cuette@jll.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
