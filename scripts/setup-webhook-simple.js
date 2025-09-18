@@ -8,7 +8,7 @@ dotenv.config();
 
 // Configuration
 const FIGMA_TOKEN = process.env.FIGMA_PERSONAL_ACCESS_TOKEN;
-const WEBHOOK_URL = 'https://sparkling-sunflower-ca7cd5.netlify.app';
+const WEBHOOK_URL = process.env.WEBHOOK_URL || 'https://solsticetokenspipeline.netlify.app/webhook';
 
 if (!FIGMA_TOKEN) {
     console.error('❌ FIGMA_PERSONAL_ACCESS_TOKEN non trouvé dans les variables d\'environnement');
