@@ -78,6 +78,7 @@
   --type-message-emphasized-size: var(--type-L-title3-size);
   --type-message-emphasized-typeface: var(--type-L-title3-typeface);
   --type-message-emphasized-weight: var(--type-L-title3-weight);
+  --type-TestDensitySystemVariable: #ffffff;
   --type-title1-letterSpacing: var(--type-L-title1-letterSpacing);
   --type-title1-lineHeight: var(--type-L-title1-lineHeight);
   --type-title1-paragraphSpacing: var(--type-L-title1-paragraphSpacing);
@@ -96,7 +97,9 @@
   --type-title3-size: var(--type-L-title3-size);
   --type-title3-typeface: var(--type-L-title3-typeface);
   --type-title3-weight: var(--type-L-title3-weight);
+  --layout-grid-columns: var(--layout-grid-L-columns);
   --layout-grid-columnsScroll: var(--layout-grid-L-columnsScroll);
+  --layout-grid-gutter: var(--layout-grid-L-gutter);
   --layout-grid-sidePadding: var(--layout-grid-L-sidePadding);
   --layout-stack-horizontal-gap-default: var(--spacing-micro-3);
   --comp-accordion-leftDropdown-gap: var(--spacing-micro-4);
@@ -501,6 +504,7 @@
   --type-message-emphasized-size: var(--type-M-bodyEmphasized-size);
   --type-message-emphasized-typeface: var(--type-M-bodyEmphasized-typeface);
   --type-message-emphasized-weight: var(--type-M-bodyEmphasized-weight);
+  --type-TestDensitySystemVariable: #ffffff;
   --type-title1-letterSpacing: var(--type-M-title1-letterSpacing);
   --type-title1-lineHeight: var(--type-M-title1-lineHeight);
   --type-title1-paragraphSpacing: var(--type-M-title1-paragraphSpacing);
@@ -519,7 +523,9 @@
   --type-title3-size: var(--type-M-title3-size);
   --type-title3-typeface: var(--type-M-title3-typeface);
   --type-title3-weight: var(--type-M-title3-weight);
+  --layout-grid-columns: var(--layout-grid-M-columns);
   --layout-grid-columnsScroll: var(--layout-grid-M-columnsScroll);
+  --layout-grid-gutter: var(--layout-grid-M-gutter);
   --layout-grid-sidePadding: var(--layout-grid-M-sidePadding);
   --layout-stack-horizontal-gap-default: var(--spacing-micro-2);
   --comp-accordion-leftDropdown-gap: var(--spacing-micro-3);
@@ -924,6 +930,7 @@
   --type-message-emphasized-size: var(--type-H-bodyEmphasized-size);
   --type-message-emphasized-typeface: var(--type-H-bodyEmphasized-typeface);
   --type-message-emphasized-weight: var(--type-H-bodyEmphasized-weight);
+  --type-TestDensitySystemVariable: #ffffff;
   --type-title1-letterSpacing: var(--type-H-title1-letterSpacing);
   --type-title1-lineHeight: var(--type-H-title1-lineHeight);
   --type-title1-paragraphSpacing: var(--type-H-title1-paragraphSpacing);
@@ -942,7 +949,9 @@
   --type-title3-size: var(--type-H-title3-size);
   --type-title3-typeface: var(--type-H-title3-typeface);
   --type-title3-weight: var(--type-H-title3-weight);
+  --layout-grid-columns: var(--layout-grid-H-columns);
   --layout-grid-columnsScroll: var(--layout-grid-H-columnsScroll);
+  --layout-grid-gutter: var(--layout-grid-H-gutter);
   --layout-grid-sidePadding: var(--layout-grid-H-sidePadding);
   --layout-stack-horizontal-gap-default: var(--spacing-micro-1);
   --comp-accordion-leftDropdown-gap: var(--spacing-micro-3);
