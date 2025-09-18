@@ -1,7 +1,7 @@
 const https = require('https');
 
 exports.handler = async (event, context) => {
-  console.log('Webhook function called:', event.httpMethod);
+  console.log('Webhook function called:', event.httpMethod, new Date().toISOString());
   
   // Gérer les requêtes OPTIONS (CORS)
   if (event.httpMethod === 'OPTIONS') {
