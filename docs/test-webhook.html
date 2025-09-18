@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Webhook Netlify</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f6f8fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .loading { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+        .btn {
+            background: #0366d6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 10px 5px;
+        }
+        .btn:hover { background: #0256cc; }
+        .btn:disabled { background: #6c757d; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Webhook Netlify</h1>
+        <p>Testez votre webhook Netlify Function qui déclenche GitHub Actions.</p>
+        
+        <div id="status" class="status info">
+            Prêt à tester le webhook...
+        </div>
+        
+        <div id="actions">
+            <button class="btn" onclick="testWebhook()">🧪 Test Webhook</button>
+            <button class="btn" onclick="clearLog()">🗑️ Clear Log</button>
+        </div>
+        
+        <div id="logs" style="display: none;">
+            <h3>📋 Logs</h3>
+            <pre id="log-content"></pre>
+        </div>
+        
+        <h3>🔗 URLs du webhook</h3>
+        <ul>
+            <li><code>http://solsticetokenspipeline.netlify.app/.netlify/functions/webhook</code></li>
+            <li><code>http://solsticetokenspipeline.netlify.app/webhook</code> (redirect)</li>
+        </ul>
+    </div>
+
+    <script>
+        function log(message) {
+            console.log(message);
+            const logContent = document.getElementById('log-content');
+            const timestamp = new Date().toISOString();
+            logContent.textContent += `[${timestamp}] ${message}\n`;
+            document.getElementById('logs').style.display = 'block';
+        }
+        
+        function updateStatus(message, type = 'info') {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+        }
+        
+        async function testWebhook() {
+            try {
+                updateStatus('🧪 Test du webhook Netlify...', 'loading');
+                log('Déclenchement du test webhook');
+                
+                const testPayload = {
+                    event_type: 'FILE_PUBLISHED',
+                    file_key: 'test-file-key',
+                    file_name: 'Test File',
+                    timestamp: new Date().toISOString()
+                };
+                
+                const response = await fetch('/.netlify/functions/webhook', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(testPayload)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    updateStatus('✅ Webhook testé avec succès !', 'success');
+                    log('Réponse du webhook:');
+                    log(JSON.stringify(result, null, 2));
+                } else {
+                    updateStatus('❌ Erreur lors du test', 'error');
+                    log(`Erreur ${response.status}: ${JSON.stringify(result, null, 2)}`);
+                }
+            } catch (error) {
+                updateStatus('❌ Erreur de connexion', 'error');
+                log(`Erreur: ${error.message}`);
+            }
+        }
+        
+        function clearLog() {
+            document.getElementById('log-content').textContent = '';
+            document.getElementById('logs').style.display = 'none';
+        }
+        
+        // Log de démarrage
+        log('Page de test webhook chargée');
+        log('Prêt à tester le webhook Netlify Function');
+    </script>
+</body>
+</html>
