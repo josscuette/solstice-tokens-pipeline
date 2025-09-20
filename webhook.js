@@ -13,11 +13,9 @@ export const handler = async (event, context) => {
 
     const body = JSON.parse(event.body || '{}');
     
-    // Fichiers Figma autorisés (IDs des 3 fichiers principaux)
+    // Fichiers Figma autorisés (test avec Core Primitives seulement)
     const allowedFileIds = [
-      'C5A2VlekTKqBeOw0xCAcFH', // Core Primitives
-      'dsC3Ox9b8xO9PVXjRugQze', // Density System  
-      'wLvDaVOlQQcc1WacqT7BtB'  // Color Themes
+      'wLvDaVOlQQcc1WacqT7BtB'  // Core Primitives (ID correct d'après les logs)
     ];
     
     // Vérifier que l'événement est LIBRARY_PUBLISH
@@ -41,11 +39,9 @@ export const handler = async (event, context) => {
     
     console.log(`Processing LIBRARY_PUBLISH for file: ${fileId}`);
     
-    // Mapping des IDs vers les noms des sources
+    // Mapping des IDs vers les noms des sources (test avec Core Primitives seulement)
     const fileIdToSource = {
-      'C5A2VlekTKqBeOw0xCAcFH': 'core-primitives',
-      'dsC3Ox9b8xO9PVXjRugQze': 'density-system',
-      'wLvDaVOlQQcc1WacqT7BtB': 'color-themes'
+      'wLvDaVOlQQcc1WacqT7BtB': 'core-primitives'  // Core Primitives (ID correct)
     };
     
     // Déclencher l'action GitHub

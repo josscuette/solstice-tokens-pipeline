@@ -146,7 +146,7 @@ class FigmaTokenExtractor {
         const filesToExtract = [
             {
                 key: 'C5A2VlekTKqBeOw0xCAcFH',
-                source: 'core-primitives',
+                source: 'core-tokens',
                 description: 'Core Primitives - breakpoints, colors, spacing, radius, shadows'
             },
             {
@@ -156,7 +156,7 @@ class FigmaTokenExtractor {
             },
             {
                 key: 'wLvDaVOlQQcc1WacqT7BtB',
-                source: 'color-themes',
+                source: 'core-primitives',
                 description: 'Color Themes - surface, text, brand colors'
             }
         ];

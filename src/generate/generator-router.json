@@ -1,0 +1,24 @@
+{
+  "routing": [
+    {
+      "generator": "themes",
+      "description": "Generates CSS variables for semantic colors with 4 theme modes. Creates grouped selectors for :root, [data-theme='light'], [data-brand='jll'], [data-theme='dark'], [data-brand='jll'], [data-theme='light'], [data-brand='lasalle'], [data-theme='dark'], [data-brand='lasalle']. Resolves aliases one level only.",
+      "collections": ["theme"]
+    },
+    {
+      "generator": "responsive", 
+      "description": "Generates responsive CSS variables with media queries. Creates variables for each breakpoint (mobile-Small, mobile-Default, mobile-Large, tablet-Small, tablet-Default, tablet-Large, laptop-Small, laptop-Default, laptop-Large, desktop-default, desktop-large, desktop-extraLarge) with @media queries. Resolves aliases one level only.",
+      "collections": ["responsive"]
+    },
+    {
+      "generator": "density",
+      "description": "Generates CSS variables for density tokens with 3 modes (low, medium, high). Creates grouped selectors for each density level and resolves aliases one level only.",
+      "collections": ["densitySpecific"]
+    },
+    {
+      "generator": "primitives",
+      "description": "Generates static CSS variables for primitives (spacing, radius, scale, core, etc.). Creates simple CSS variables without modes, resolves aliases one level only.",
+      "collections": ["densityAgnostic","breakpoint","color","elevation","spacing","typography","radii"]
+    }
+  ]
+}

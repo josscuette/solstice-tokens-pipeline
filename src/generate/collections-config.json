@@ -1,0 +1,74 @@
+{
+  "collections": [
+    {
+        "id": "breakpoint",
+        "name": "Core Primitives / Breakpoint",
+        "description": "Breakpoints tokens with no modes",
+        "figmaId": "VariableCollectionId:1633:111",
+        "modes": ["1633:1"]
+    },
+    {
+        "id": "color",
+        "name": "Core Primitives / Color",
+        "description": "Primitives colors tokens with no modes",
+        "figmaId": "VariableCollectionId:677:12500",
+        "modes": ["677:14"]
+    },
+    {
+        "id": "elevation",
+        "name": "Core Primitives / Elevation",
+        "description": "Primitives elevation tokens with no modes",
+        "figmaId": "VariableCollectionId:2400:32",
+        "modes": ["2400:0"]
+    },
+    {
+        "id": "spacing",
+        "name": "Core Primitives / Spacing",
+        "description": "Primitives spacing tokens with no modes",
+        "figmaId": "VariableCollectionId:1632:68",
+        "modes": ["1632:0"]
+    },
+    {
+        "id": "typography",
+        "name": "Core Primitives / Typography",
+        "description": "Primitives typography tokens with no modes, containing the base type scale",
+        "figmaId": "VariableCollectionId:1660:4743",
+        "modes": ["1660:0"]
+    },
+    {
+        "id": "theme",
+        "name": "Core Tokens / theme",
+        "description": "Semantic colors with 4 modes (light, dark, lasalle light, lasalle dark)",
+        "figmaId": "VariableCollectionId:2403:11472",
+        "modes": ["23394:0", "23394:1", "2403:0", "2403:1"]
+    },
+    {
+        "id": "responsive", 
+        "name": "Responsive values",
+        "description": "Breakpoints avec 12 modes responsives",
+        "figmaId": "VariableCollectionId:13263:32",
+        "modes": ["13263:0", "13263:1", "13263:2", "13263:3", "13263:4", "13263:5", "13263:6", "13263:7", "13263:8", "13263:9", "13263:10", "13263:11"]
+    },
+    {
+        "id": "densitySpecific",
+        "name": "Density specific", 
+        "description": "Density specific tokens, with 3 modes (low, medium, high)",
+        "figmaId": "VariableCollectionId:24109:209749",
+        "modes": ["24109:0", "24109:3", "24109:4"]
+    },
+    {
+        "id": "densityAgnostic",
+        "name": "Density agnostic", 
+        "description": "Tokens with no density modes",
+        "figmaId": "VariableCollectionId:24109:209751",
+        "modes": ["24109:2"]
+    },
+    {
+        "id": "radii",
+        "name": "Radii",
+        "description": "Radius tokens with no modes",
+        "figmaId": "VariableCollectionId:3067:48587",
+        "modes": ["3067:1"]
+    }
+  ]
+}

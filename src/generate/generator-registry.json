@@ -24,7 +24,7 @@
         "Categorical/*"
       ],
       "emissionStrategy": "staticOnce",
-      "sourceFilter": "core-primitives"
+      "sourceFilter": "core-tokens"
     },
     {
       "id": "responsive",
@@ -61,15 +61,8 @@
       "name": "Themes",
       "targetFile": "generated/css/themes.css",
       "patterns": [
-        "amber/*",
-        "atoll/*",
-        "crimson/*",
-        "forest/*",
-        "glacier/*",
         "jllRed/*",
         "lasalle/*",
-        "lilac/*",
-        "lima/*",
         "elevationLevels/*",
         "surface/*",
         "text/*",
@@ -80,7 +73,7 @@
         "elevation/*"
       ],
       "emissionStrategy": "themeOnly",
-      "sourceFilter": "color-themes"
+      "sourceFilter": "core-primitives"
     }
   ]
 }

@@ -36,17 +36,16 @@ exports.handler = async (event, context) => {
     // Log du webhook reçu
     console.log('Webhook Figma reçu:', JSON.stringify(body, null, 2));
     
-    // Fichiers Figma autorisés (IDs des 3 fichiers principaux)
+    // Fichiers Figma autorisés (test avec Core Primitives seulement)
     const allowedFileIds = [
-      'C5A2VlekTKqBeOw0xCAcFH', // Core Primitives
-      'dsC3Ox9b8xO9PVXjRugQze', // Density System  
-      'wLvDaVOlQQcc1WacqT7BtB'  // Color Themes
+      'wLvDaVOlQQcc1WacqT7BtB'  // Core Primitives (ID correct d'après les logs)
     ];
     
     // DEBUG: Log des valeurs pour diagnostic
     console.log(`DEBUG - event_type: "${body.event_type}"`);
     console.log(`DEBUG - file_key: "${body.file_key}"`);
     console.log(`DEBUG - allowedFileIds:`, allowedFileIds);
+    console.log(`DEBUG - Checking event_type...`);
     
     // Vérifier que l'événement est LIBRARY_PUBLISH ou figma-publish
     if (body.event_type !== 'LIBRARY_PUBLISH' && body.event_type !== 'figma-publish') {
@@ -62,6 +61,8 @@ exports.handler = async (event, context) => {
       };
     }
     
+    console.log(`DEBUG - Event type OK, checking file...`);
+    
     // Vérifier que le fichier concerné est dans notre liste autorisée
     // Gérer les deux structures : directe (Figma) et nested (manuel)
     let fileId;
@@ -70,6 +71,9 @@ exports.handler = async (event, context) => {
     } else {
       fileId = body.file_key;
     }
+    
+    console.log(`DEBUG - fileId extracted: "${fileId}"`);
+    console.log(`DEBUG - Checking if fileId is in allowedFileIds...`);
     
     if (!fileId || !allowedFileIds.includes(fileId)) {
       console.log(`Ignoring file: ${fileId} (not in allowed list)`);
@@ -84,13 +88,13 @@ exports.handler = async (event, context) => {
       };
     }
     
+    console.log(`DEBUG - File ID OK, proceeding...`);
+    
     console.log(`Processing LIBRARY_PUBLISH for file: ${fileId}`);
     
-    // Mapping des IDs vers les noms des sources
+    // Mapping des IDs vers les noms des sources (test avec Core Primitives seulement)
     const fileIdToSource = {
-      'C5A2VlekTKqBeOw0xCAcFH': 'core-primitives',
-      'dsC3Ox9b8xO9PVXjRugQze': 'density-system',
-      'wLvDaVOlQQcc1WacqT7BtB': 'color-themes'
+      'wLvDaVOlQQcc1WacqT7BtB': 'core-primitives'  // Core Primitives (ID correct)
     };
     
     // Déclencher l'action GitHub
