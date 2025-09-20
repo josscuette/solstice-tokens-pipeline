@@ -31,7 +31,7 @@ A comprehensive design token pipeline that extracts tokens from Figma and genera
 │   ├── density.css                    # Density-specific tokens
 │   └── responsive.css                 # Responsive tokens with media queries
 ├── docs/                             # Documentation and webhook testing
-├── netlify/functions/                # Netlify webhook handler
+│   └── netlify/functions/           # Netlify webhook handler
 └── .github/workflows/                # GitHub Actions for automation
 ```
 
